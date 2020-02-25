@@ -3,7 +3,7 @@ namespace Civi\Api4\Action\System;
 
 use Civi\Api4\Utils\LogLimitTrait;
 
-class PruneLogTables extends \Civi\Api4\Generic\AbstractAction {
+class Prunelogtables extends \Civi\Api4\Generic\AbstractAction {
 
   use LogLimitTrait;
 
@@ -25,10 +25,10 @@ class PruneLogTables extends \Civi\Api4\Generic\AbstractAction {
   public function _run(\Civi\Api4\Generic\Result $result) {
     $this->refresh();
     $logDir = \Civi::paths()->getVariable('civicrm.log', 'path');
-    \Civi::log()->debug("PruneLogTables: logDir $logDir, cutoff date " . $this->cutoffDate);
+    \Civi::log()->debug("Prunelogtables: logDir $logDir, cutoff date " . $this->cutoffDate);
 
     if (($cutoff = strtotime($this->cutoffDate)) === FALSE) {
-      $error = "PruneLogTables: not a valid date: " . $this->cutoffDate;
+      $error = "Prunelogtables: not a valid date: " . $this->cutoffDate;
       \Civi::log()->error($error);
       throw new \API_Exception($error);
     }

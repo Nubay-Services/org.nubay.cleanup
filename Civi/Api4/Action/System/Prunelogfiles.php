@@ -3,7 +3,7 @@ namespace Civi\Api4\Action\System;
 
 use Civi\Api4\Utils\LogLimitTrait;
 
-class PruneLogFiles extends \Civi\Api4\Generic\AbstractAction {
+class Prunelogfiles extends \Civi\Api4\Generic\AbstractAction {
 
   use LogLimitTrait;
 
@@ -18,10 +18,10 @@ class PruneLogFiles extends \Civi\Api4\Generic\AbstractAction {
   public function _run(\Civi\Api4\Generic\Result $result) {
     $this->refresh();
     $logDir = \Civi::paths()->getVariable('civicrm.log', 'path');
-    \Civi::log()->debug("PruneLogFiles: logDir $logDir, cutoff date " . $this->cutoffDate);
+    \Civi::log()->debug("Prunelogfiles: logDir $logDir, cutoff date " . $this->cutoffDate);
 
     if (($cutoff = strtotime($this->cutoffDate)) === FALSE) {
-      $error = "PruneLogFiles: not a valid date: " . $this->cutoffDate;
+      $error = "Prunelogfiles: not a valid date: " . $this->cutoffDate;
       \Civi::log()->error($error);
       throw new \API_Exception($error);
     }
@@ -35,12 +35,12 @@ class PruneLogFiles extends \Civi\Api4\Generic\AbstractAction {
           }
 
           if (FALSE === ($filemtime = filemtime($fullFile))) {
-            $this->error("PruneLogFiles: unable to filemtime file: $fullFile");
+            $this->error("Prunelogfiles: unable to filemtime file: $fullFile");
           } else {
             $filemtime = date($filemtime);
             if ($filemtime < $cutoff) {
               if (unlink($fullFile) === FALSE) {
-                $this->error("PruneLogFiles: unable to unlink file: $fullFile");
+                $this->error("Prunelogfiles: unable to unlink file: $fullFile");
               } else {
                 $result[] = [
                   'file' => $fullFile,

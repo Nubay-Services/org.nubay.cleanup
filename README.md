@@ -1,4 +1,4 @@
-# org.nubay.cleanup
+# org.nubay.prunelogs
 
 This extension provides tools for deleting old logfiles and log table data.
 
@@ -20,7 +20,7 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
 cd <extension-dir>
-cv dl org.nubay.cleanup@https://github.com/Nubay-Services/org.nubay.cleanup/archive/master.zip
+cv dl org.nubay.prunelogs@https://github.com/Nubay-Services/org.nubay.prunelogs/archive/master.zip
 ```
 
 ## Installation (CLI, Git)
@@ -30,8 +30,8 @@ install it with the command-line tool [cv](https://github.com/civicrm/cv).
 
 ```bash
 cd <extension-dir>
-git clone https://github.com/Nubay-Services/org.nubay.cleanup.git
-cv en cleanup
+git clone https://github.com/Nubay-Services/org.nubay.prunelogs.git
+cv en org.nubay.prunelogs
 ```
 
 ## Usage
@@ -68,4 +68,4 @@ https://github.com/eileenmcnaughton/nz.co.fuzion.innodbtriggers.
 
 ## Known Issues
 
-See https://github.com/Nubay-Services/org.nubay.cleanup/issues.
+See https://github.com/Nubay-Services/org.nubay.prunelogs/issues.

@@ -1,15 +1,15 @@
 <?php
 
-require_once 'cleanup.civix.php';
-use CRM_Cleanup_ExtensionUtil as E;
+require_once 'prunelogs.civix.php';
+use CRM_prunelogs_ExtensionUtil as E;
 
 /**
  * Implements hook_civicrm_config().
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_config/ 
  */
-function cleanup_civicrm_config(&$config) {
-  _cleanup_civix_civicrm_config($config);
+function prunelogs_civicrm_config(&$config) {
+  _prunelogs_civix_civicrm_config($config);
 }
 
 /**
@@ -17,8 +17,8 @@ function cleanup_civicrm_config(&$config) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_xmlMenu
  */
-function cleanup_civicrm_xmlMenu(&$files) {
-  _cleanup_civix_civicrm_xmlMenu($files);
+function prunelogs_civicrm_xmlMenu(&$files) {
+  _prunelogs_civix_civicrm_xmlMenu($files);
 }
 
 /**
@@ -26,8 +26,8 @@ function cleanup_civicrm_xmlMenu(&$files) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_install
  */
-function cleanup_civicrm_install() {
-  _cleanup_civix_civicrm_install();
+function prunelogs_civicrm_install() {
+  _prunelogs_civix_civicrm_install();
 }
 
 /**
@@ -35,8 +35,8 @@ function cleanup_civicrm_install() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_postInstall
  */
-function cleanup_civicrm_postInstall() {
-  _cleanup_civix_civicrm_postInstall();
+function prunelogs_civicrm_postInstall() {
+  _prunelogs_civix_civicrm_postInstall();
 }
 
 /**
@@ -44,8 +44,8 @@ function cleanup_civicrm_postInstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_uninstall
  */
-function cleanup_civicrm_uninstall() {
-  _cleanup_civix_civicrm_uninstall();
+function prunelogs_civicrm_uninstall() {
+  _prunelogs_civix_civicrm_uninstall();
 }
 
 /**
@@ -53,8 +53,8 @@ function cleanup_civicrm_uninstall() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_enable
  */
-function cleanup_civicrm_enable() {
-  _cleanup_civix_civicrm_enable();
+function prunelogs_civicrm_enable() {
+  _prunelogs_civix_civicrm_enable();
 }
 
 /**
@@ -62,8 +62,8 @@ function cleanup_civicrm_enable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_disable
  */
-function cleanup_civicrm_disable() {
-  _cleanup_civix_civicrm_disable();
+function prunelogs_civicrm_disable() {
+  _prunelogs_civix_civicrm_disable();
 }
 
 /**
@@ -71,8 +71,8 @@ function cleanup_civicrm_disable() {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_upgrade
  */
-function cleanup_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _cleanup_civix_civicrm_upgrade($op, $queue);
+function prunelogs_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
+  return _prunelogs_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -83,8 +83,8 @@ function cleanup_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_managed
  */
-function cleanup_civicrm_managed(&$entities) {
-  _cleanup_civix_civicrm_managed($entities);
+function prunelogs_civicrm_managed(&$entities) {
+  _prunelogs_civix_civicrm_managed($entities);
 }
 
 /**
@@ -96,8 +96,8 @@ function cleanup_civicrm_managed(&$entities) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_caseTypes
  */
-function cleanup_civicrm_caseTypes(&$caseTypes) {
-  _cleanup_civix_civicrm_caseTypes($caseTypes);
+function prunelogs_civicrm_caseTypes(&$caseTypes) {
+  _prunelogs_civix_civicrm_caseTypes($caseTypes);
 }
 
 /**
@@ -110,8 +110,8 @@ function cleanup_civicrm_caseTypes(&$caseTypes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules
  */
-function cleanup_civicrm_angularModules(&$angularModules) {
-  _cleanup_civix_civicrm_angularModules($angularModules);
+function prunelogs_civicrm_angularModules(&$angularModules) {
+  _prunelogs_civix_civicrm_angularModules($angularModules);
 }
 
 /**
@@ -119,8 +119,8 @@ function cleanup_civicrm_angularModules(&$angularModules) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_alterSettingsFolders
  */
-function cleanup_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _cleanup_civix_civicrm_alterSettingsFolders($metaDataFolders);
+function prunelogs_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
+  _prunelogs_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
@@ -130,15 +130,15 @@ function cleanup_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_entityTypes
  */
-function cleanup_civicrm_entityTypes(&$entityTypes) {
-  _cleanup_civix_civicrm_entityTypes($entityTypes);
+function prunelogs_civicrm_entityTypes(&$entityTypes) {
+  _prunelogs_civix_civicrm_entityTypes($entityTypes);
 }
 
 /**
  * Implements hook_civicrm_thems().
  */
-function cleanup_civicrm_themes(&$themes) {
-  _cleanup_civix_civicrm_themes($themes);
+function prunelogs_civicrm_themes(&$themes) {
+  _prunelogs_civix_civicrm_themes($themes);
 }
 
 // --- Functions below this ship commented out. Uncomment as required. ---
@@ -148,7 +148,7 @@ function cleanup_civicrm_themes(&$themes) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_preProcess
  *
-function cleanup_civicrm_preProcess($formName, &$form) {
+function prunelogs_civicrm_preProcess($formName, &$form) {
 
 } // */
 
@@ -157,8 +157,8 @@ function cleanup_civicrm_preProcess($formName, &$form) {
  *
  * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_navigationMenu
  *
-function cleanup_civicrm_navigationMenu(&$menu) {
-  _cleanup_civix_insert_navigation_menu($menu, 'Mailings', array(
+function prunelogs_civicrm_navigationMenu(&$menu) {
+  _prunelogs_civix_insert_navigation_menu($menu, 'Mailings', array(
     'label' => E::ts('New subliminal message'),
     'name' => 'mailing_subliminal_message',
     'url' => 'civicrm/mailing/subliminal',
@@ -166,5 +166,5 @@ function cleanup_civicrm_navigationMenu(&$menu) {
     'operator' => 'OR',
     'separator' => 0,
   ));
-  _cleanup_civix_navigationMenu($menu);
+  _prunelogs_civix_navigationMenu($menu);
 } // */
